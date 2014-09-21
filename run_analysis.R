@@ -1,7 +1,10 @@
 # Getting & Cleaning Data Course Project
 # run_analysis.R
 
-# Note: the zip file has to be in the working directory where this file run_analysis.R is located
+# Note:
+# The zip file has to be in the working directory where this file run_analysis.R is located
+# The merged datasets and the tidy dataset are then stored in the directory "merged" under the "UCI HAR Dataset" directory
+# i.e. the path is: UCI HAR Dataset/merged
 
 if(!file.exists("UCI HAR Dataset")){
     unzip('getdata-projectfiles-UCI HAR Dataset.zip',overwrite = FALSE)

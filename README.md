@@ -11,8 +11,10 @@ The files in this repository are:
 # Script
 
 The R script 'run_analysis.R' does the following:
+
 1. a 
 2. b
+3. s
 
 - 1 a
 - 2 dfdf

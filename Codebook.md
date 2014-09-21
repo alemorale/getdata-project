@@ -5,82 +5,85 @@ Codebook.md
 
 ## Code Book
 
-[1] "time.body.accelerometer.mean.X"                                 
- [2] "time.body.accelerometer.mean.Y"                                 
- [3] "time.body.accelerometer.mean.Z"                                 
- [4] "time.body.accelerometer.std.X"                                  
- [5] "time.body.accelerometer.std.Y"                                  
- [6] "time.body.accelerometer.std.Z"                                  
- [7] "time.gravity.accelerometer.mean.X"                              
- [8] "time.gravity.accelerometer.mean.Y"                              
- [9] "time.gravity.accelerometer.mean.Z"                              
-[10] "time.gravity.accelerometer.std.X"                               
-[11] "time.gravity.accelerometer.std.Y"                               
-[12] "time.gravity.accelerometer.std.Z"                               
-[13] "time.body.accelerometer.jerk.mean.X"                            
-[14] "time.body.accelerometer.jerk.mean.Y"                            
-[15] "time.body.accelerometer.jerk.mean.Z"                            
-[16] "time.body.accelerometer.jerk.std.X"                             
-[17] "time.body.accelerometer.jerk.std.Y"                             
-[18] "time.body.accelerometer.jerk.std.Z"                             
-[19] "time.body.gyroscope.mean.X"                                     
-[20] "time.body.gyroscope.mean.Y"                                     
-[21] "time.body.gyroscope.mean.Z"                                     
-[22] "time.body.gyroscope.std.X"                                      
-[23] "time.body.gyroscope.std.Y"                                      
-[24] "time.body.gyroscope.std.Z"                                      
-[25] "time.body.gyroscope.jerk.mean.X"                                
-[26] "time.body.gyroscope.jerk.mean.Y"                                
-[27] "time.body.gyroscope.jerk.mean.Z"                                
-[28] "time.body.gyroscope.jerk.std.X"                                 
-[29] "time.body.gyroscope.jerk.std.Y"                                 
-[30] "time.body.gyroscope.jerk.std.Z"                                 
-[31] "time.body.accelerometer.magnitude.mean"                         
-[32] "time.body.accelerometer.magnitude.std"                          
-[33] "time.gravity.accelerometer.magnitude.mean"                      
-[34] "time.gravity.accelerometer.magnitude.std"                       
-[35] "time.body.accelerometer.jerk.magnitude.mean"                    
-[36] "time.body.accelerometer.jerk.magnitude.std"                     
-[37] "time.body.gyroscope.magnitude.mean"                             
-[38] "time.body.gyroscope.magnitude.std"                              
-[39] "time.body.gyroscope.jerk.magnitude.mean"                        
-[40] "time.body.gyroscope.jerk.magnitude.std"                         
-[41] "frequency.body.accelerometer.mean.X"                            
-[42] "frequency.body.accelerometer.mean.Y"                            
-[43] "frequency.body.accelerometer.mean.Z"                            
-[44] "frequency.body.accelerometer.std.X"                             
-[45] "frequency.body.accelerometer.std.Y"                             
-[46] "frequency.body.accelerometer.std.Z"                             
-[47] "frequency.body.accelerometer.mean.frequency.X"                  
-[48] "frequency.body.accelerometer.mean.frequency.Y"                  
-[49] "frequency.body.accelerometer.mean.frequency.Z"                  
-[50] "frequency.body.accelerometer.jerk.mean.X"                       
-[51] "frequency.body.accelerometer.jerk.mean.Y"                       
-[52] "frequency.body.accelerometer.jerk.mean.Z"                       
-[53] "frequency.body.accelerometer.jerk.std.X"                        
-[54] "frequency.body.accelerometer.jerk.std.Y"                        
-[55] "frequency.body.accelerometer.jerk.std.Z"                        
-[56] "frequency.body.accelerometer.jerk.mean.frequency.X"             
-[57] "frequency.body.accelerometer.jerk.mean.frequency.Y"             
-[58] "frequency.body.accelerometer.jerk.mean.frequency.Z"             
-[59] "frequency.body.gyroscope.mean.X"                                
-[60] "frequency.body.gyroscope.mean.Y"                                
-[61] "frequency.body.gyroscope.mean.Z"                                
-[62] "frequency.body.gyroscope.std.X"                                 
-[63] "frequency.body.gyroscope.std.Y"                                 
-[64] "frequency.body.gyroscope.std.Z"                                 
-[65] "frequency.body.gyroscope.mean.frequency.X"                      
-[66] "frequency.body.gyroscope.mean.frequency.Y"                      
-[67] "frequency.body.gyroscope.mean.frequency.Z"                      
-[68] "frequency.body.accelerometer.magnitude.mean"                    
-[69] "frequency.body.accelerometer.magnitude.std"                     
-[70] "frequency.body.accelerometer.magnitude.mean.frequency"          
-[71] "frequency.body.body.accelerometer.jerk.magnitude.mean"          
-[72] "frequency.body.body.accelerometer.jerk.magnitude.std"           
-[73] "frequency.body.body.accelerometer.jerk.magnitude.mean.frequency"
-[74] "frequency.body.body.gyroscope.magnitude.mean"                   
-[75] "frequency.body.body.gyroscope.magnitude.std"                    
-[76] "frequency.body.body.gyroscope.magnitude.mean.frequency"         
-[77] "frequency.body.body.gyroscope.jerk.magnitude.mean"              
-[78] "frequency.body.body.gyroscope.jerk.magnitude.std"               
-[79] "frequency.body.body.gyroscope.jerk.magnitude.mean.frequency"    
+The following is the list of variables contained in the tidy dataset. The list is as follows:
+- "variable.name" [units]
+
+[1] "time.body.accelerometer.mean.X" [m/s^2]                                
+ [2] "time.body.accelerometer.mean.Y" [m/s^2]                                
+ [3] "time.body.accelerometer.mean.Z" [m/s^2]                                                                 
+ [4] "time.body.accelerometer.std.X" [m/s^2]                                                                  
+ [5] "time.body.accelerometer.std.Y" [m/s^2]                                                                  
+ [6] "time.body.accelerometer.std.Z" [m/s^2]                                                                  
+ [7] "time.gravity.accelerometer.mean.X" [m/s^2]                                                              
+ [8] "time.gravity.accelerometer.mean.Y" [m/s^2]                                                              
+ [9] "time.gravity.accelerometer.mean.Z" [m/s^2]                                                              
+[10] "time.gravity.accelerometer.std.X" [m/s^2]                                                               
+[11] "time.gravity.accelerometer.std.Y" [m/s^2]                                                               
+[12] "time.gravity.accelerometer.std.Z" [m/s^2]                                                               
+[13] "time.body.accelerometer.jerk.mean.X" [m/s^3]                                                                                           
+[14] "time.body.accelerometer.jerk.mean.Y" [m/s^3]                                                                                                                       
+[15] "time.body.accelerometer.jerk.mean.Z" [m/s^3]                                                                                                                       
+[16] "time.body.accelerometer.jerk.std.X" [m/s^3]                                                                                                                        
+[17] "time.body.accelerometer.jerk.std.Y" [m/s^3]                                                                                                                        
+[18] "time.body.accelerometer.jerk.std.Z" [m/s^3]                                                                                                                        
+[19] "time.body.gyroscope.mean.X" [m/s^2]                                 
+[20] "time.body.gyroscope.mean.Y" [m/s^2]                                     
+[21] "time.body.gyroscope.mean.Z" [m/s^2]                                     
+[22] "time.body.gyroscope.std.X" [m/s^2]                                      
+[23] "time.body.gyroscope.std.Y" [m/s^2]                                      
+[24] "time.body.gyroscope.std.Z" [m/s^2]                                      
+[25] "time.body.gyroscope.jerk.mean.X" [m/s^3]                                
+[26] "time.body.gyroscope.jerk.mean.Y" [m/s^3]                                
+[27] "time.body.gyroscope.jerk.mean.Z" [m/s^3]                                
+[28] "time.body.gyroscope.jerk.std.X" [m/s^3]                                 
+[29] "time.body.gyroscope.jerk.std.Y" [m/s^3]                                 
+[30] "time.body.gyroscope.jerk.std.Z" [m/s^3]                                 
+[31] "time.body.accelerometer.magnitude.mean" [m/s^2]                         
+[32] "time.body.accelerometer.magnitude.std" [m/s^2]                          
+[33] "time.gravity.accelerometer.magnitude.mean" [m/s^2]                      
+[34] "time.gravity.accelerometer.magnitude.std" [m/s^2]                      
+[35] "time.body.accelerometer.jerk.magnitude.mean" [m/s^3]                    
+[36] "time.body.accelerometer.jerk.magnitude.std" [m/s^3]                     
+[37] "time.body.gyroscope.magnitude.mean" [m/s^2]                             
+[38] "time.body.gyroscope.magnitude.std" [m/s^2]                              
+[39] "time.body.gyroscope.jerk.magnitude.mean" [m/s^3]                        
+[40] "time.body.gyroscope.jerk.magnitude.std" [m/s^3]                         
+[41] "frequency.body.accelerometer.mean.X" [(m/s^2)^2]                            
+[42] "frequency.body.accelerometer.mean.Y" [(m/s^2)^2]                                                       
+[43] "frequency.body.accelerometer.mean.Z" [(m/s^2)^2]                                                     
+[44] "frequency.body.accelerometer.std.X" [(m/s^2)^2]                                                        
+[45] "frequency.body.accelerometer.std.Y" [(m/s^2)^2]                                                        
+[46] "frequency.body.accelerometer.std.Z" [(m/s^2)^2]                                                        
+[47] "frequency.body.accelerometer.mean.frequency.X" [(m/s^3)^2]                                             
+[48] "frequency.body.accelerometer.mean.frequency.Y" [(m/s^3)^2]                                             
+[49] "frequency.body.accelerometer.mean.frequency.Z" [(m/s^3)^2]                                            
+[50] "frequency.body.accelerometer.jerk.mean.X"  [(m/s^3)^2]                         
+[51] "frequency.body.accelerometer.jerk.mean.Y"    [(m/s^3)^2]                     
+[52] "frequency.body.accelerometer.jerk.mean.Z"                   [(m/s^3)^2]        
+[53] "frequency.body.accelerometer.jerk.std.X"                         [(m/s^3)^2]   
+[54] "frequency.body.accelerometer.jerk.std.Y"                         [(m/s^3)^2]   
+[55] "frequency.body.accelerometer.jerk.std.Z"                         [(m/s^3)^2]   
+[56] "frequency.body.accelerometer.jerk.mean.frequency.X"              [(m/s^3)^2]   
+[57] "frequency.body.accelerometer.jerk.mean.frequency.Y"              [(m/s^3)^2]   
+[58] "frequency.body.accelerometer.jerk.mean.frequency.Z"              [(m/s^3)^2]   
+[59] "frequency.body.gyroscope.mean.X"                                 [(m/s^2)^2]   
+[60] "frequency.body.gyroscope.mean.Y"                                 [(m/s^2)^2]   
+[61] "frequency.body.gyroscope.mean.Z"                                 [(m/s^2)^2]   
+[62] "frequency.body.gyroscope.std.X"                                  [(m/s^2)^2]   
+[63] "frequency.body.gyroscope.std.Y"                                  [(m/s^2)^2]   
+[64] "frequency.body.gyroscope.std.Z"                                  [(m/s^2)^2]   
+[65] "frequency.body.gyroscope.mean.frequency.X"                       [(m/s^2)^2]   
+[66] "frequency.body.gyroscope.mean.frequency.Y"                       [(m/s^2)^2]   
+[67] "frequency.body.gyroscope.mean.frequency.Z"                       [(m/s^2)^2]   
+[68] "frequency.body.accelerometer.magnitude.mean"                     [(m/s^2)^2]   
+[69] "frequency.body.accelerometer.magnitude.std"                      [(m/s^2)^2]   
+[70] "frequency.body.accelerometer.magnitude.mean.frequency"           [(m/s^2)^2]   
+[71] "frequency.body.body.accelerometer.jerk.magnitude.mean"           [(m/s^3)^2]   
+[72] "frequency.body.body.accelerometer.jerk.magnitude.std"             [(m/s^3)^2]   
+[73] "frequency.body.body.accelerometer.jerk.magnitude.mean.frequency"  [(m/s^3)^2]   
+[74] "frequency.body.body.gyroscope.magnitude.mean"                    [(m/s^2)^2]   
+[75] "frequency.body.body.gyroscope.magnitude.std"                     [(m/s^2)^2]   
+[76] "frequency.body.body.gyroscope.magnitude.mean.frequency"          [(m/s^2)^2]   
+[77] "frequency.body.body.gyroscope.jerk.magnitude.mean"               [(m/s^3)^2]   
+[78] "frequency.body.body.gyroscope.jerk.magnitude.std"                [(m/s^3)^2]   
+[79] "frequency.body.body.gyroscope.jerk.magnitude.mean.frequency"     [(m/s^3)^2]   

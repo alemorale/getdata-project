@@ -1,11 +1,14 @@
 # Getting & Cleaning Data Course Project
 # run_analysis.R
 
+# Note: the zip file has to be in the working directory where this file run_analysis.R is located
+
 if(!file.exists("UCI HAR Dataset")){
     unzip('getdata-projectfiles-UCI HAR Dataset.zip',overwrite = FALSE)
 }
 dir <- "UCI HAR Dataset/"
 dir.create(paste(dir,"merged",sep=""),showWarnings = FALSE)
+
 
 # 1. Merge train and test sets
 print("1. Merge train and test sets.")
@@ -39,6 +42,7 @@ X <- read.table('UCI HAR Dataset/merged/X.txt')
 y <- read.table('UCI HAR Dataset/merged/y.txt')
 subject <- read.table('UCI HAR Dataset/merged/subject.txt')
 
+
 # 2. Extracts only the measurements on the mean and sd for each measurement
 # Use grep to find column names of mean and sd
 print("2. Extract measurements on the mean and sd")
@@ -49,6 +53,7 @@ id.std <- grep('std',features$feature.Name)
 ids <- sort(c(id.mean,id.std))
 X.subset <- X[,ids]  # new data set with only mean and sd measurements
 print("done!")
+
 
 # 3. Descriptive activity names to name activities of data set
 print("3. Asign descriptive activity names")
@@ -65,9 +70,8 @@ activities$Activity <- as.factor(unlist(lapply(activities$Activity,simpleCap)))
 y <- as.matrix(sapply(y,function(x) activities$Activity[x]))
 colnames(subject) <- "subject"
 colnames(y) <- "activity"
-
-
 print("done!")
+
 
 # 4. labels the data set with descriptive variable names
 print("4. Descriptive variable names...")
@@ -76,7 +80,7 @@ variableNames2 <- variableNames
 variableNames<-gsub("\\()","",variableNames)
 variableNames<-gsub("-","",variableNames)
 variableNames<-gsub("^(t)","time.",variableNames) # ^(t) -> "time "
-variableNames<-gsub("^(f)","frequency.",variableNames) # ^(f) -> "frequency"FourierTransform""
+variableNames<-gsub("^(f)","frequency.",variableNames) # ^(f) -> "frequency"
 variableNames<-gsub("Body","body.",variableNames)
 variableNames<-gsub("Gravity","gravity.",variableNames)
 variableNames<-gsub("Acc","accelerometer.",variableNames)  # Acc -> acceleration
@@ -90,15 +94,12 @@ variableNames<-gsub("\\.$","",variableNames)
 colnames(X.subset) <- variableNames
 print("done!")
 
-# 5. tidy data set with the average of each variable for each activity and each subject
-#From the data set in step 4, creates a second, 
-#independent tidy data set with the average of each variable for each activity and each subject.
-print("5. Creadte tidy dataset")
 
+# 5. tidy data set with the average of each variable for each activity and each subject
+print("5. Creadte tidy dataset")
+library(plyr)
 tidy.data <- cbind(y,X.subset)
 tidy.data <- cbind(subject,tidy.data)
 s<-ddply(tidy.data,.(subject, activity), function(df) colMeans(df[,3:81]))
-#s2<-ddply(newdata,.(subject,activity),summarize,mean = ave(variableNames[1],FUN=mean))
-#s3<-ddply(newdata,.(subject),function(df) colMeans=ave(df[,3:81],FUN=colMeans))
 write.table(s,file = "UCI HAR Dataset/merged/tidydataset.txt",row.name=FALSE)
 print("done.")

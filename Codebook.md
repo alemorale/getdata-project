@@ -1,7 +1,16 @@
 Codebook.md
 =============
+ 
+## Data
 
-## Study design
+The data represents data collected from the accelerometers from the Samsung Galaxy S smartphone.
+The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist.
+The sensor signals were pre-processed using noise filters and sampling with a fixed-width sliding window. The sensor acceleration signal was separated into its gravitational and body motion components. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.  The obtained dataset was randomly partitioned into two sets, with 70% being training data and 30% test data [1].
+
+Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. 
+
+## Transformations
+There were no transformations performed to the data. Only a selection of a subset of variables and the variable names were replaced by more descriptive and readable names.
 
 ## Code Book
 
@@ -25,28 +34,28 @@ The following is the list of variables contained in the tidy dataset with the no
 [16] "time.body.accelerometer.jerk.std.X" [m/s^3]                                                                                                                        
 [17] "time.body.accelerometer.jerk.std.Y" [m/s^3]                                                                                                                        
 [18] "time.body.accelerometer.jerk.std.Z" [m/s^3]                                                                                                                        
-[19] "time.body.gyroscope.mean.X" [m/s^2]                                 
-[20] "time.body.gyroscope.mean.Y" [m/s^2]                                     
-[21] "time.body.gyroscope.mean.Z" [m/s^2]                                     
-[22] "time.body.gyroscope.std.X" [m/s^2]                                      
-[23] "time.body.gyroscope.std.Y" [m/s^2]                                      
-[24] "time.body.gyroscope.std.Z" [m/s^2]                                      
-[25] "time.body.gyroscope.jerk.mean.X" [m/s^3]                                
-[26] "time.body.gyroscope.jerk.mean.Y" [m/s^3]                                
-[27] "time.body.gyroscope.jerk.mean.Z" [m/s^3]                                
-[28] "time.body.gyroscope.jerk.std.X" [m/s^3]                                 
-[29] "time.body.gyroscope.jerk.std.Y" [m/s^3]                                 
-[30] "time.body.gyroscope.jerk.std.Z" [m/s^3]                                 
+[19] "time.body.gyroscope.mean.X" [1/s]                                 
+[20] "time.body.gyroscope.mean.Y" [1/s]                                     
+[21] "time.body.gyroscope.mean.Z" [1/s]                                     
+[22] "time.body.gyroscope.std.X" [1/s]                                      
+[23] "time.body.gyroscope.std.Y" [1/s]                                      
+[24] "time.body.gyroscope.std.Z" [1/s]                                      
+[25] "time.body.gyroscope.jerk.mean.X" [1/s^3]                                
+[26] "time.body.gyroscope.jerk.mean.Y" [1/s^3]                                
+[27] "time.body.gyroscope.jerk.mean.Z" [1/s^3]                                
+[28] "time.body.gyroscope.jerk.std.X" [1/s^3]                                 
+[29] "time.body.gyroscope.jerk.std.Y" [1/s^3]                                 
+[30] "time.body.gyroscope.jerk.std.Z" [1/s^3]                                 
 [31] "time.body.accelerometer.magnitude.mean" [m/s^2]                         
 [32] "time.body.accelerometer.magnitude.std" [m/s^2]                          
 [33] "time.gravity.accelerometer.magnitude.mean" [m/s^2]                      
 [34] "time.gravity.accelerometer.magnitude.std" [m/s^2]                      
 [35] "time.body.accelerometer.jerk.magnitude.mean" [m/s^3]                    
 [36] "time.body.accelerometer.jerk.magnitude.std" [m/s^3]                     
-[37] "time.body.gyroscope.magnitude.mean" [m/s^2]                             
-[38] "time.body.gyroscope.magnitude.std" [m/s^2]                              
-[39] "time.body.gyroscope.jerk.magnitude.mean" [m/s^3]                        
-[40] "time.body.gyroscope.jerk.magnitude.std" [m/s^3]                         
+[37] "time.body.gyroscope.magnitude.mean" [1/s]                             
+[38] "time.body.gyroscope.magnitude.std" [1/s]                              
+[39] "time.body.gyroscope.jerk.magnitude.mean" [1/s^3]                        
+[40] "time.body.gyroscope.jerk.magnitude.std" [1/s^3]                         
 [41] "frequency.body.accelerometer.mean.X" [(m/s^2)^2]                            
 [42] "frequency.body.accelerometer.mean.Y" [(m/s^2)^2]                                                       
 [43] "frequency.body.accelerometer.mean.Z" [(m/s^2)^2]                                                     
@@ -65,24 +74,26 @@ The following is the list of variables contained in the tidy dataset with the no
 [56] "frequency.body.accelerometer.jerk.mean.frequency.X"              [(m/s^3)^2]   
 [57] "frequency.body.accelerometer.jerk.mean.frequency.Y"              [(m/s^3)^2]   
 [58] "frequency.body.accelerometer.jerk.mean.frequency.Z"              [(m/s^3)^2]   
-[59] "frequency.body.gyroscope.mean.X"                                 [(m/s^2)^2]   
-[60] "frequency.body.gyroscope.mean.Y"                                 [(m/s^2)^2]   
-[61] "frequency.body.gyroscope.mean.Z"                                 [(m/s^2)^2]   
-[62] "frequency.body.gyroscope.std.X"                                  [(m/s^2)^2]   
-[63] "frequency.body.gyroscope.std.Y"                                  [(m/s^2)^2]   
-[64] "frequency.body.gyroscope.std.Z"                                  [(m/s^2)^2]   
-[65] "frequency.body.gyroscope.mean.frequency.X"                       [(m/s^2)^2]   
-[66] "frequency.body.gyroscope.mean.frequency.Y"                       [(m/s^2)^2]   
-[67] "frequency.body.gyroscope.mean.frequency.Z"                       [(m/s^2)^2]   
+[59] "frequency.body.gyroscope.mean.X"                                 [(1/s)^2]   
+[60] "frequency.body.gyroscope.mean.Y"                                 [(1/s)^2]   
+[61] "frequency.body.gyroscope.mean.Z"                                 [(1/s)^2]   
+[62] "frequency.body.gyroscope.std.X"                                  [(1/s)^2]   
+[63] "frequency.body.gyroscope.std.Y"                                  [(1/s)^2]   
+[64] "frequency.body.gyroscope.std.Z"                                  [(1/s)^2]   
+[65] "frequency.body.gyroscope.mean.frequency.X"                       [(1/s)^2]   
+[66] "frequency.body.gyroscope.mean.frequency.Y"                       [(1/s)^2]   
+[67] "frequency.body.gyroscope.mean.frequency.Z"                       [(1/s)^2]   
 [68] "frequency.body.accelerometer.magnitude.mean"                     [(m/s^2)^2]   
 [69] "frequency.body.accelerometer.magnitude.std"                      [(m/s^2)^2]   
 [70] "frequency.body.accelerometer.magnitude.mean.frequency"           [(m/s^2)^2]   
 [71] "frequency.body.body.accelerometer.jerk.magnitude.mean"           [(m/s^3)^2]   
 [72] "frequency.body.body.accelerometer.jerk.magnitude.std"             [(m/s^3)^2]   
 [73] "frequency.body.body.accelerometer.jerk.magnitude.mean.frequency"  [(m/s^3)^2]   
-[74] "frequency.body.body.gyroscope.magnitude.mean"                    [(m/s^2)^2]   
-[75] "frequency.body.body.gyroscope.magnitude.std"                     [(m/s^2)^2]   
-[76] "frequency.body.body.gyroscope.magnitude.mean.frequency"          [(m/s^2)^2]   
-[77] "frequency.body.body.gyroscope.jerk.magnitude.mean"               [(m/s^3)^2]   
-[78] "frequency.body.body.gyroscope.jerk.magnitude.std"                [(m/s^3)^2]   
-[79] "frequency.body.body.gyroscope.jerk.magnitude.mean.frequency"     [(m/s^3)^2]   
+[74] "frequency.body.body.gyroscope.magnitude.mean"                    [(1/s)^2]   
+[75] "frequency.body.body.gyroscope.magnitude.std"                     [(1/s)^2]   
+[76] "frequency.body.body.gyroscope.magnitude.mean.frequency"          [(1/s)^2]   
+[77] "frequency.body.body.gyroscope.jerk.magnitude.mean"               [(1/s^3)^2]   
+[78] "frequency.body.body.gyroscope.jerk.magnitude.std"                [(1/s^3)^2]   
+[79] "frequency.body.body.gyroscope.jerk.magnitude.mean.frequency"     [(1/s^3)^2]   
+
+[1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012

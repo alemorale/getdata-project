@@ -1,4 +1,4 @@
-getdata-project
+Get Data and Cleaning Course Project
 ===============
 
 The files in this repository are:

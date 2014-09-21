@@ -6,7 +6,7 @@ Codebook.md
 ## Code Book
 
 The following is the list of variables contained in the tidy dataset. The list is as follows:
-- "variable.name" [units]
+[index] "variable.name" [units]
 
 [1] "time.body.accelerometer.mean.X" [m/s^2]                                
  [2] "time.body.accelerometer.mean.Y" [m/s^2]                                

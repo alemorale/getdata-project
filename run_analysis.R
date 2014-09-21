@@ -63,8 +63,8 @@ activities <- read.table(fileName,col.names = c('Activity.Id','Activity'))
 activities$Activity <- chartr(old ="_",new = " ",activities$Activity)
 activities$Activity <- as.factor(unlist(lapply(activities$Activity,simpleCap)))
 y <- as.matrix(sapply(y,function(x) activities$Activity[x]))
-colnames(subject) <- "Subject"
-colnames(y) <- "Activity"
+colnames(subject) <- "subject"
+colnames(y) <- "activity"
 
 
 print("done!")
@@ -72,17 +72,21 @@ print("done!")
 # 4. labels the data set with descriptive variable names
 print("4. Descriptive variable names...")
 variableNames <- as.vector(features$feature.Name[ids])
-
-trialNames<-chartr("()","  ",variableNames)
-trialNames<-chartr("-"," ",trialNames)
-# ^t -> "time "
-# ^f -> "frequency"FourierTransform""
-# Acc -> acceleration
-# Gyro -> angularvelocity
-# Mag -> magnitude
-# Freq -> frequency
-# mean() -> Mean
-# std() -> Std
+variableNames2 <- variableNames
+variableNames<-gsub("\\()","",variableNames)
+variableNames<-gsub("-","",variableNames)
+variableNames<-gsub("^(t)","time.",variableNames) # ^(t) -> "time "
+variableNames<-gsub("^(f)","frequency.",variableNames) # ^(f) -> "frequency"FourierTransform""
+variableNames<-gsub("Body","body.",variableNames)
+variableNames<-gsub("Gravity","gravity.",variableNames)
+variableNames<-gsub("Acc","accelerometer.",variableNames)  # Acc -> acceleration
+variableNames<-gsub("Gyro","gyroscope.",variableNames) # Gyro -> angularvelocity
+variableNames<-gsub("Jerk","jerk.",variableNames)
+variableNames<-gsub("Mag","magnitude.",variableNames) # Mag -> magnitude
+variableNames<-gsub("Freq","frequency.",variableNames) # Freq -> frequency
+variableNames<-gsub("mean","mean.",variableNames) # mean() -> Mean
+variableNames<-gsub("std","std.",variableNames) # std() -> Std
+variableNames<-gsub("\\.$","",variableNames)
 colnames(X.subset) <- variableNames
 print("done!")
 
@@ -91,10 +95,10 @@ print("done!")
 #independent tidy data set with the average of each variable for each activity and each subject.
 print("5. Creadte tidy dataset")
 
-newdata <- cbind(y,X.subset)
-newdata <- cbind(subject,newdata)
-s<-ddply(newdata,.(Subject, Activity), function(df) colMeans(df[,3:81]))
-s2<-ddply(newdata,.(Subject,Activity),summarize,mean = ave(variableNames[1],FUN=mean))
-s3<-ddply(newdata,.(Subject),function(df) colMeans=ave(df[,3:81],FUN=colMeans))
+tidy.data <- cbind(y,X.subset)
+tidy.data <- cbind(subject,tidy.data)
+s<-ddply(tidy.data,.(subject, activity), function(df) colMeans(df[,3:81]))
+#s2<-ddply(newdata,.(subject,activity),summarize,mean = ave(variableNames[1],FUN=mean))
+#s3<-ddply(newdata,.(subject),function(df) colMeans=ave(df[,3:81],FUN=colMeans))
 write.table(s,file = "UCI HAR Dataset/merged/tidydataset.txt",row.name=FALSE)
 print("done.")

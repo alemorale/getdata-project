@@ -4,11 +4,11 @@ Codebook.md
 ## Data
 
 The data represents data collected from the accelerometers from the Samsung Galaxy S smartphone.
-The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist.
+The experiments were carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist.
 The sensor signals were pre-processed using noise filters and sampling with a fixed-width sliding window. The sensor acceleration signal was separated into its gravitational and body motion components. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.  The obtained dataset was randomly partitioned into two sets, with 70% being training data and 30% test data [1].
 
 ## Transformations
-There were no transformations performed to the data per se. The features included in the tidy dataset consist of a subset of the 561 features contained in the original datasets. The selection was such that only mean values and standard deviations of the derived features remained. The variable names were replaced by more descriptive and readable names.
+The training and tests sets were merged into a single dataset. Then, a process of elimination of features was carried out. The features included in the tidy dataset consist of a subset of the 561 features contained in the original dataset. The selection was such that only mean values and standard deviations of the derived features remained, this left 79 variables. The variable names were replaced by more descriptive and readable names.
 
 ## Code Book
 

@@ -8,7 +8,7 @@ The experiments have been carried out with a group of 30 volunteers within an ag
 The sensor signals were pre-processed using noise filters and sampling with a fixed-width sliding window. The sensor acceleration signal was separated into its gravitational and body motion components. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.  The obtained dataset was randomly partitioned into two sets, with 70% being training data and 30% test data [1].
 
 ## Transformations
-There were no transformations performed to the data per se. The variables on the tidy dataset consist of a subset of all variables contained in the original datasets, the selection consisting of only mean values and standard deviation of the quantities measured. The variable names were replaced by more descriptive and readable names.
+There were no transformations performed to the data per se. The features included in the tidy dataset consist of a subset of the 561 features contained in the original datasets. The selection was such that only mean values and standard deviations of the derived features remained. The variable names were replaced by more descriptive and readable names.
 
 ## Code Book
 

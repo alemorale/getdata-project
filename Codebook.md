@@ -7,10 +7,8 @@ The data represents data collected from the accelerometers from the Samsung Gala
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist.
 The sensor signals were pre-processed using noise filters and sampling with a fixed-width sliding window. The sensor acceleration signal was separated into its gravitational and body motion components. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.  The obtained dataset was randomly partitioned into two sets, with 70% being training data and 30% test data [1].
 
-Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. 
-
 ## Transformations
-There were no transformations performed to the data. Only a selection of a subset of variables and the variable names were replaced by more descriptive and readable names.
+There were no transformations performed to the data per se. The variables on the tidy dataset consist of a subset of all variables contained in the original datasets, the selection consisting of only mean values and standard deviation of the quantities measured. The variable names were replaced by more descriptive and readable names.
 
 ## Code Book
 
